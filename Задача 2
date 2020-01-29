@@ -1,0 +1,19 @@
+program z2
+implicit none
+real k,b,y0,x0,S 
+write(*,*) 'abcisa A (x)'
+read(*,*) x0
+write(*,*) 'ordinata A (y)'
+read(*,*) y0
+write(*,*) 'peremennie priamoj (k,b)'
+read(*,*) k,b
+if (y0 .EQ. k*x0+b) then
+  S=0
+  else if (y0>k*x0+b) then 
+    S=(y0-k*x0-b)*(y0-k*x0-b)/(k*k+1)
+    else 
+      S=-((y0-k*x0-b)*(y0-k*x0-b)/(k*k+1))
+end if
+write(*,*) 'kvadrat rasstoiania ot tochki do priamoj=',S 
+
+end program z2
