@@ -1,0 +1,31 @@
+program z4
+
+implicit none
+integer i, n
+real E,s1, s2, o, k, Pn, Pm, P
+  
+write(*,*) 'Peremennaya kolichestva (n) '
+read(*,*) n
+write(*,*) 'Vvedite epsilon (E) '
+read(*,*) E
+
+Pn=4 * sqrt (2.0)
+P=Pn
+i=3
+
+do while (i<n)
+  Pn=P
+   s1=2.0*i
+   s2=2.0**i
+   o=4.0-P**2.0/2.0**s1
+   k=2.0-sqrt (o)
+   P=s2*sqrt (k) 
+  i=i+1
+  Pm=P-Pn
+  if (Pm<=E) exit
+end do
+
+write(*,*) 'Vernoe neravenstvo pri n=', i
+write(*,*) 'Chislo Pi=', P
+
+end program
