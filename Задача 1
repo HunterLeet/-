@@ -1,0 +1,11 @@
+program zachet
+implicit none
+real j,x,l,a,b,c
+x=2.3
+l=x/3.0
+a=-0.5624998
+b=0.2109357
+c=-0.03954289
+j=x*(0.5+a*l*l+b*l*l*l*l+c*l*l*l*l*l*l)
+write(*,*) j
+end program zachet
