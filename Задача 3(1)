@@ -35,3 +35,5 @@ write (*,*) 'Pologitelnie korni <', x
 ELSE
 write (*,*) 'Net pologitelnih korney'
 end if
+
+end program
