@@ -1,14 +1,37 @@
 program z3
+IMPLICIT NONE
+integer i 
+real x, a(1:100), n, m, B
 
-real a0, a1, a2, a3, a4,X
+write (*,*)
+READ *,n
+n=n+1
+write (*,*)
+read *,a(1:n)
 
-a0=1
-a1=4
-a2=-7
-a3=-22
-a4=24
+i=1
+m=0
+B=0
 
-X=1+(-a3)**(1/a2)
+do while (i<=n)
+if (B>a(i)) B=a(i)
+i=i+1
+end do
+i=1
+
+if (B<0) then 
+do while (m>=0)
+m=a(i)
+i=i+1
+end do
+
+B=abs(b)
+
+n=n-i+1
+X=1+(B/a(1))**((1/n))
 
 write (*,*) 'Pologitelnie korni <', x
-end program
+
+ELSE
+write (*,*) 'Net pologitelnih korney'
+end if
